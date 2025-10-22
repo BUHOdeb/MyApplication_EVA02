@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+
+    <!-- ... (otros strings que ya tenías) ... -->
+
+    <!-- Textos para la pantalla de Dashboard -->
+    <string name="dashboard_toolbar_title">Dashboard IoT</string>
+    <string name="dashboard_welcome_message">¡Hola, Usuario!</string>
+    <string name="dashboard_info_status">Estado general de tus dispositivos conectados</string>
+    <string name="dashboard_icon_description">Ícono de dashboard</string>
+    <string name="dashboard_coming_soon">Pronto más información aquí.</string>
+</resources>

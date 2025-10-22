@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales de la app -->
+    <color name="colorPrimary">#00796B</color>
+
+    <!-- Colores de fondo y de texto -->
+    <color name="app_background">#F5F5F5</color>
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_tertiary">#9E9E9E</color>
+
+    <!-- Otros colores estándar -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
