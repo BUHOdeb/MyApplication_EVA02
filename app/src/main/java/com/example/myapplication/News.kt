@@ -5,10 +5,10 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class News(
-    val id: String? = null,
-    val title: String? = null,
-    val summary: String? = null,
-    val content: String? = null,
-    val author: String? = null,
-    val date: String? = null
+    val title: String = "",
+    val summary: String = "",
+    val content: String = "",
+    val author: String = "",
+    val date: String = "",
+    val imageUrl: String = ""
 ) : Parcelable
