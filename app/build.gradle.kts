@@ -41,7 +41,6 @@ android {
 dependencies {
     // --- Listas Maestras (BOMs) para evitar conflictos ---
     implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
-    // LA LÍNEA MALDITA HA SIDO ELIMINADA
 
     // --- Librerías que tu app necesita ---
     implementation("androidx.core:core-ktx:1.10.1")
@@ -56,6 +55,9 @@ dependencies {
 
     // Login con Google
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+    // Coil para cargar imágenes
+    implementation("io.coil-kt:coil:2.5.0")
 
     // --- Librerías para Tests ---
     testImplementation("junit:junit:4.13.2")

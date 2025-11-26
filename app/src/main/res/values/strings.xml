@@ -9,4 +9,7 @@
     <string name="dashboard_info_status">Estado general de tus dispositivos conectados</string>
     <string name="dashboard_icon_description">Ícono de dashboard</string>
     <string name="dashboard_coming_soon">Pronto más información aquí.</string>
+
+    <!-- Agrega tu Web Client ID de Google Sign-In aquí -->
+    <string name="default_web_client_id" translatable="false">YOUR_WEB_CLIENT_ID</string>
 </resources>

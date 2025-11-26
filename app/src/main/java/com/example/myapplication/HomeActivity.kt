@@ -10,6 +10,7 @@ import com.example.myapplication.utils.AddNewsActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.example.myapplication.News
 
 class HomeActivity : AppCompatActivity() {
 

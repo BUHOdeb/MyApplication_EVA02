@@ -4,68 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".ViewNewsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        tools:context=".ViewNewsActivity">
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/tvNewsTitleDetail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Título de la Noticia"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Título de la Noticia" />
 
         <TextView
             android:id="@+id/tvNewsAuthorDetail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Autor"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/tvNewsTitleDetail"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewsTitleDetail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Autor de la Noticia" />
 
         <TextView
             android:id="@+id/tvNewsDateDetail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Fecha"
-            android:textSize="14sp"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
             app:layout_constraintTop_toBottomOf="@id/tvNewsAuthorDetail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Fecha de Publicación" />
 
-        <TextView
-            android:id="@+id/tvNewsSummaryDetail"
+        <ImageView
+            android:id="@+id/ivNewsImageDetail"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_marginTop="16dp"
-            android:text="Resumen de la noticia..."
-            android:textSize="18sp"
+            android:scaleType="centerCrop"
             app:layout_constraintTop_toBottomOf="@id/tvNewsDateDetail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/tvNewsContentDetail"
+            android:id="@+id/tvNewsBodyDetail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Contenido completo de la noticia..."
             android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/tvNewsSummaryDetail"
+            app:layout_constraintTop_toBottomOf="@id/ivNewsImageDetail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Contenido completo de la noticia..." />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

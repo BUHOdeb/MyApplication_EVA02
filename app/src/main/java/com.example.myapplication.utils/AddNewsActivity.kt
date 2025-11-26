@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.News
 import com.example.myapplication.R
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -15,6 +16,7 @@ class AddNewsActivity : AppCompatActivity() {
     private lateinit var etNewsContent: EditText
     private lateinit var etNewsAuthor: EditText
     private lateinit var etNewsDate: EditText
+    private lateinit var etNewsImageUrl: EditText
     private lateinit var btnSaveNews: Button
 
     private val db = FirebaseFirestore.getInstance()
@@ -28,6 +30,7 @@ class AddNewsActivity : AppCompatActivity() {
         etNewsContent = findViewById(R.id.etNewsContent)
         etNewsAuthor = findViewById(R.id.etNewsAuthor)
         etNewsDate = findViewById(R.id.etNewsDate)
+        etNewsImageUrl = findViewById(R.id.etNewsImageUrl)
         btnSaveNews = findViewById(R.id.btnSaveNews)
 
         btnSaveNews.setOnClickListener {
@@ -41,19 +44,14 @@ class AddNewsActivity : AppCompatActivity() {
         val content = etNewsContent.text.toString().trim()
         val author = etNewsAuthor.text.toString().trim()
         val date = etNewsDate.text.toString().trim()
+        val imageUrl = etNewsImageUrl.text.toString().trim()
 
-        if (title.isEmpty() || summary.isEmpty() || content.isEmpty() || author.isEmpty() || date.isEmpty()) {
+        if (title.isEmpty() || summary.isEmpty() || content.isEmpty() || author.isEmpty() || date.isEmpty() || imageUrl.isEmpty()) {
             showAlert("Error", "Todos los campos son obligatorios")
             return
         }
 
-        val news = hashMapOf(
-            "title" to title,
-            "summary" to summary,
-            "content" to content,
-            "author" to author,
-            "date" to date
-        )
+        val news = News(title, summary, content, author, date, imageUrl)
 
         db.collection("news")
             .add(news)

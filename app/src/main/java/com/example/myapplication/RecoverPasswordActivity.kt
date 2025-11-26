@@ -49,7 +49,7 @@ class RecoverPasswordActivity : AppCompatActivity() {
                     } else {
                         val newPassword = UUID.randomUUID().toString().substring(0, 8)
                         tvNewPassword.text = "Nueva contraseña: $newPassword (Simulación)"
-                        Toast.makeText(this, "Esta es una simulación. La contraseña no se ha actualizado en Firebase.", Toast.LONG).show()
+                        Toast.makeText(this, "Esta es una simulación. La contraseña no se ha actualizado en Firebase.", Toast.LENGTH_LONG).show()
                     }
                 } else {
                     Toast.makeText(this, "Error al verificar el correo electrónico", Toast.LENGTH_SHORT).show()

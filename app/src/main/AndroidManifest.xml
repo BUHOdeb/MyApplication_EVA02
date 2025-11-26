@@ -9,8 +9,11 @@
         android:theme="@style/Theme.MyApplication">
 
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".RecoverActivity" />
+        <activity android:name=".RecoverPasswordActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".ViewNewsActivity" />
+        <activity android:name=".utils.AddNewsActivity" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
